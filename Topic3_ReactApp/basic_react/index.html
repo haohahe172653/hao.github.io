@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <!-- 
+        <div class="container">
+            <h1 class="title">Basic React application</h1>
+            <ul>
+                <li class="item">Topic 1 - React introduction</li>
+                <li class="item">Topic 2 - React element</li>
+            </ul>
+        </div> 
+    -->
+    <script type="text/babel">
+        // Tao 1 element bang React
+        /*
+        const newElement = React.createElement(
+            'div',
+            {className: 'container'},
+            React.createElement(
+                'h1',
+                {className: 'title'},
+                'Basic React application'
+            ),
+            React.createElement(
+                'ul',
+                null,
+                React.createElement(
+                    'li',
+                    {className: 'item'},
+                    'Topic 1 - React introduction'
+                ),
+                React.createElement(
+                    'li',
+                    {className: 'item'},
+                    'Topic 2 - React element'
+                )
+            )
+        )
+        */
+    
+        // Su dung JSX de tao ra 1 element trong React
+        const newElement = (
+            <div className="container">
+                <h1 className="title">Basic React application</h1>
+                <ul>
+                    <li className="item">Topic 1 - React introduction</li>
+                    <li className="item">Topic 2 - React element</li>
+                </ul>
+            </div>
+        )
+
+        // Gắn newElement từ Virtual DOM trong React len DOM cua Web browser
+        const root = ReactDOM.createRoot(document.getElementById('root'))
+        root.render(newElement)
+    </script>
+</body>
+</html>
